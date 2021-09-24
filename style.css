@@ -58,13 +58,14 @@ button{
 }
 
 .final-msg{
+    background-color: #FFF;
     padding: 20px;
-    width: 70%;
+    width: 58%;
     margin: 30vh 40vh;
 }
 
 .final-msg h1{
-    color: #FFF;
+    color: black;
     font-size: 4rem;
     padding: 10px;
 }

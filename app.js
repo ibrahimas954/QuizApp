@@ -37,7 +37,7 @@ class Question {
 const quest1 = new Question("İdeal boy-kilo endeksi puanı kaçtır ?","18","18-25","25-30","30++","b");
 const quest2 = new Question( "Aşağıdakilerden hangisi en çekirdek erkek özelliğidir ?","Disiplin","Öfke","Güç","Ağlamak","a");
 const quest3 = new Question("Pi sayısının ilk 3 rakamı kaçtır ?",3.0,5.24,6.53,3.14,"d");
-const quest4 = new Question("Mike Tyson'ın lakabı nedir ?","Iron Mike","Afgan","Küçük Penis","Kral Yumruk","a");
+const quest4 = new Question("Mike Tyson'ın lakabı nedir ?","Iron Mike","Killer Puncher","Demir Kroşe","Kral Yumruk","a");
 const quest5 = new Question("AKP kaç yıldır iktidar ?", 10, 15, 8, 20, "d");
 
 let questsArr = [quest1, quest2, quest3, quest4, quest5];
@@ -52,20 +52,15 @@ submitBtn.addEventListener("click", () => {
         if (checkedValue == questsArr[arrIndex].RightAnswer) {
           currentScore++;
           arrIndex++;
-          console.log("Congrats" + currentScore);
           questsArr[arrIndex].loadQuest();
         } else {
           arrIndex++;
-          console.log("Wrong");
           questsArr[arrIndex].loadQuest();
         }
       } else {
-        console.log("booommmm");
         container.classList.toggle("hide");
         document.querySelector(".final-msg").classList.toggle("hide");
-        console.log(currentScore);
-        finalMessage.innerHTML =
-          "Test Bitti. Doğru cevap sayınız " + currentScore + "/5 .";
+        finalMessage.innerHTML = "Test Bitti. Doğru cevap sayınız " + currentScore + "/5 .";
       }
     }
   }
